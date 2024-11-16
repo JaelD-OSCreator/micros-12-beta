@@ -4,8 +4,8 @@ input.onButtonPressed(Button.A, function () {
         log += 1
         basic.pause(2000)
         basic.showString("Toca el logo para enviar Hola a Jordi")
-        if (true) {
-        	
+        if (input.logoIsPressed()) {
+            radio.sendString("Hola")
         }
     } else {
         log += 1
@@ -17,6 +17,9 @@ input.onButtonPressed(Button.B, function () {
         log += 1
         basic.pause(2000)
         basic.showString("Toca el A+B para enviar Hola a Jael")
+        if (input.buttonIsPressed(Button.AB)) {
+            radio.sendString("Hola")
+        }
     } else {
         log += 1
     }
