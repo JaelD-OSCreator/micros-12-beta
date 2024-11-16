@@ -1,10 +1,13 @@
 input.onButtonPressed(Button.A, function () {
+    radio.setGroup(1)
     if (Jael == 1) {
+        radio.setGroup(1)
         basic.showString("Hola Jael")
         log += 1
         basic.pause(2000)
         basic.showString("Toca el logo para enviar Hola a Jordi")
         if (input.logoIsPressed()) {
+            radio.setGroup(1)
             radio.sendString("Hola")
         }
     } else {
@@ -14,10 +17,13 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.B, function () {
     if (Jordi == 1) {
         basic.showString("Hola Jordi")
+        radio.setGroup(1)
         log += 1
         basic.pause(2000)
         basic.showString("Toca el A+B para enviar Hola a Jael")
+        radio.setGroup(1)
         if (input.buttonIsPressed(Button.AB)) {
+            radio.setGroup(1)
             radio.sendString("Hola")
         }
     } else {
